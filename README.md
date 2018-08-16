@@ -7,4 +7,6 @@
 * Changing, 
 * Contributing, 
 * Referring bugs 
-  ...for the claimed aim. 
+
+
+...for the claimed aim. 
