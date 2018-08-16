@@ -1,2 +1,2 @@
 ### psychology
-R Functions for psychologists and Social science people
+* R Functions for psychologists and Social science people
