@@ -71,4 +71,6 @@ rbind_null_df_lists <- function ( list_of_dfs ) {
 ####             Running the example                 #####
 ##########################################################
 
-rbind_null_df_lists ( list_of_df )
+# Uncomment the below line in order to run the example 
+                                                    
+# rbind_null_df_lists ( list_of_df )
