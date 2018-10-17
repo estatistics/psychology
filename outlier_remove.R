@@ -88,6 +88,7 @@ rownames(ex_df) <- 1:dim(ex_df)[1]
 ### NOTE: Plots may change slightly even no outlier removed, if cut-off/cook_mahal args are manipulated 
 #         due to the way that distances are ordered
 
+### NOTE: Complete datasets only
 
 
 ##########################################################
@@ -98,12 +99,12 @@ rownames(ex_df) <- 1:dim(ex_df)[1]
 outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,  cut_off, plotit  ) {
     
       #### Test section 
-  
-      # df_data_wt_id <- ex_df
-      # id_name_var = "a"
-      # sensitivity= 1 
-      # cut_off = 1
-      # plotit = 1
+       # 
+       # df_data_wt_id <- ex_df
+       # id_name_var = "a"
+       # sensitivity= 3 
+       # cut_off = 1
+       # plotit = 1
       
   df_data            <- as.data.frame( df_data_wt_id[, -which(colnames( df_data_wt_id  ) %in% c(id_name_var)) ] )
   sens               <- sensitivity
@@ -158,6 +159,7 @@ outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,
     ckdata_out_id    <-  as.data.frame( ckdata_out_id )
     ckdata_out_noid  <- ckdata_out_id[-1]
     data_out         <- ckdata_out_noid
+    data_out_id      <- ckdata_out_id
     
     cooks_data_out   <- round( cooks.distance(lm( data_out ) )[order(cooks.distance( lm( data_out ) ))]*100, 3 )
     mahal_dt_out     <- mahalanobis( data_out, colMeans( data_out ), cov( data_out ))
@@ -184,6 +186,7 @@ outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,
     mhdata_out_id    <-  as.data.frame( mhdata_out_id )
     mhdata_out_noid  <- mhdata_out_id[-1]
     data_out         <- mhdata_out_noid
+    data_out_id      <- mhdata_out_id
     
     cooks_data_out   <- round( cooks.distance(lm( data_out ) )[order(cooks.distance( lm( data_out ) ))]*100, 3 )
     mahal_dt_out     <- mahalanobis( data_out, colMeans( data_out ), cov( data_out ))
@@ -210,6 +213,8 @@ outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,
     alldata_out_id    <-  as.data.frame( alldata_out_id )
     alldata_out_noid  <- alldata_out_id[-1]
     data_out          <- alldata_out_noid
+    data_out_id       <- alldata_out_id
+    
     
     cooks_data_out   <- round( cooks.distance(lm( data_out ) )[order(cooks.distance( lm( data_out ) ))]*100, 3 )
     mahal_dt_out     <- mahalanobis( data_out, colMeans( data_out ), cov( data_out ))
@@ -230,19 +235,20 @@ outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,
     if ( plotit == 2 | plotit == "FALSE" | plotit == "F" ) {  } 
 
   }
-  ck_diff_dist
-  mh_diff_dist
   
+
   mh_datas           <- ck_diff_dist[1:(sens+2)] 
   ck_datas           <- mh_diff_dist[1:(sens+2)] 
+  uniq_id            <- unique(names(c(mh_datas, ck_datas)))
   df_mh_ck           <- round( cbind(mh_datas, ck_datas ), 1) 
   df_mh_ck_rbind     <- rbind(names( mh_datas ), names(ck_datas) )
   unlist_df_mc       <- unlist(lapply(1:dim( df_mh_ck_rbind )[2], function(x) paste0(df_mh_ck_rbind[,x], collapse=" ")))
   rownames(df_mh_ck) <- unlist_df_mc
   
-  list( data_out, df_mh_ck )
+  list( data_out_id, df_mh_ck )
   
-    }
+}
+
     
 
 ##########################################################
@@ -255,5 +261,6 @@ outlier_remove <- function( df_data_wt_id, id_name_var, cook_mahal, sensitivity,
 # outlier_remove( ex_df, "a", "C", 0, 5, 1 )  # Zero points are removed, 
 # outlier_remove( ex_df, "a", "C", 3, 1, 1 )  # 3 (*2) pairs of outliers are removed
 
-                                      
-                                      
+
+
+
