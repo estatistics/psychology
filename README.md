@@ -11,4 +11,4 @@
 
 ...for the claimed aim. 
 
- ###### we must love each other... love is caring for the other... in the same earth we all live... a great part of love is forgiveness
+ ###### We must love each other... love is caring for the other... in the same earth we all live... a great part of love is forgiveness
