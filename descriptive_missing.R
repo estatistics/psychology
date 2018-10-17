@@ -75,9 +75,12 @@ descriptive_missing <- function (  df_missing_list_df  ) {
   descriptive_missing_df
 }
 
+
 ##########################################################
 ####             The Example                        #####
 ##########################################################
 
-descriptive_missing (  list( df_missing_list, df_missing_list  ) )
+# Please uncomment the below line/s in order to run the example 
+
+# descriptive_missing (  list( df_missing_list, df_missing_list  ) )
 
