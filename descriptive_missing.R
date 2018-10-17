@@ -56,16 +56,24 @@ df_missing_list    <-  rbind_null_df_lists ( list_of_df )
 
 
 descriptive_missing <- function (  df_missing_list_df  ) {
-  
 
-  max_df <- list()
-  for (i in 1: length( df_missing_list_df ) ) {
-    
-  max_df[[i]] <-   max( (round( df_missing_list_df[[i]][,2]  / df_missing_list_df[[i]][,1], 3) *100), na.rm= TRUE) 
-    
+   max_cats <- max( unlist(lapply( 1:length( df_missing_list_df ), function(x) length( df_missing_list_df[[x]] ) )) )
+   max_df   <- list()
   
+    for (i in 1:length( df_missing_list_df ) ) {
+    
+    if ( length( df_missing_list_df[[i]] ) == max_cats ) {
+      
+      max_df[[i]] <-   max( (round( df_missing_list_df[[i]][2]  / df_missing_list_df[[i]][1], 3) *100), na.rm= TRUE) 
+      
+    } 
+    
+    if ( length( df_missing_list_df[[i]] ) != max_cats ) {
+      
+      max_df[[i]] <-   max( (round( 0 / df_missing_list_df[[i]][1], 3) *100), na.rm= TRUE) 
+    
+      }
   }
-  
   
   descriptive_missing_df  <- do.call(rbind, max_df ) 
   descriptive_missing_df
