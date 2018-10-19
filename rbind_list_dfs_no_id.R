@@ -44,9 +44,10 @@ rownames(ex_df) <- 1:dim(ex_df)[1]
 descriptive_missing <- function (  df_missing_list_df  ) {
   
   # ### Test section
-  df_missing_list_df <- list( ex_df )
+  # df_missing_list_df <- list( ex_df )
+  df_missing_list_df <-  df_list 
   
-
+  
   # rbind_null_df_lists function is included
   rbind_null_df_lists <- function ( list_of_dfs ) {
     
@@ -81,21 +82,20 @@ descriptive_missing <- function (  df_missing_list_df  ) {
   for (i in 1:length( df_missing_list_df ) ) {
     
     # Variable-wise missing stats
-    var_perc_df            <- rbind_null_df_lists( apply(is.na(df_missing_list_df[[i]]),  2, ( table) ) )
-    var__miss              <- (round( var_perc_df[,2]  / sum(var_perc_df[[1]]), 3) *100)
-    var_max_df             <- var__miss[which (var__miss == max(var__miss, na.rm=TRUE))]
-    var_max_p_df[[i]]      <- var_max_df[[1]]
-    names( var_max_p_df )  <- paste0( names( var_max_df ), collapse="," )
+    var_perc_df                 <- rbind_null_df_lists( apply(is.na(df_missing_list_df[[i]]),  2, ( table) ) )
+    var__miss                   <- (round( var_perc_df[,2]  / sum(var_perc_df[[1]]), 3) *100)
+    var_max_df                  <- var__miss[which (var__miss == max(var__miss, na.rm=TRUE))]
+    var_max_p_df[[i]]           <- var_max_df[[1]]
+    names( var_max_p_df )[[i]]  <- paste0( names( var_max_df ), collapse="," )
     
     # Case-wise missing stats
-    case_perc_df           <- rbind_null_df_lists( apply(is.na(df_missing_list_df[[i]]),  1, ( table) ) )
-    case__miss             <- (round( case_perc_df[,2]  / sum(case_perc_df[[1]]), 3) *100)
-    case_max_df            <- case__miss[which (case__miss == max(case__miss, na.rm=TRUE))]
-    case_max_p_df[[i]]     <- case_max_df[[1]]
-    names( case_max_p_df ) <- paste0( names( case_max_df ), collapse="," )
-
+    case_perc_df                <- rbind_null_df_lists( apply(is.na(df_missing_list_df[[i]]),  1, ( table) ) )
+    case__miss                  <- (round( case_perc_df[,2]  / sum(case_perc_df[[1]]), 3) *100)
+    case_max_df                 <- case__miss[which (case__miss == max(case__miss, na.rm=TRUE))]
+    case_max_p_df[[i]]          <- case_max_df[[1]]
+    names( case_max_p_df )[[i]] <- paste0( names( case_max_df ), collapse="," )
+    
   }
-  
   
   
   var_missing_df          <- do.call( rbind, var_max_p_df ) 
@@ -115,3 +115,4 @@ descriptive_missing <- function (  df_missing_list_df  ) {
 # Please uncomment the below line/s in order to run the example 
 
 # descriptive_missing ( ex_df  ) 
+
