@@ -41,6 +41,7 @@ rownames(ex_df) <- 1:dim(ex_df)[1]
 ##########################################################
 
 
+
 descriptive_missing <- function (  df_missing_list_df  ) {
   
   # ### Test section
@@ -101,11 +102,15 @@ descriptive_missing <- function (  df_missing_list_df  ) {
   var_missing_df          <- do.call( rbind, var_max_p_df ) 
   case_missing_df         <- do.call( rbind, case_max_p_df ) 
   
-  descriptive_missing_df             <- cbind( var_missing_df, case_missing_df, rownames(var_missing_df),  rownames(case_missing_df) )
+  descriptive_missing_df             <- cbind( var_missing_df, case_missing_df, rownames( var_missing_df ),  rownames(case_missing_df ) )
   colnames( descriptive_missing_df ) <- c( "max_var_miss", "max_case_miss", "vars", "cases") 
   rownames( descriptive_missing_df ) <- paste0( "df_", seq(1:length( df_missing_list_df ))  )
+  descr_missing$max_var_miss         <- as.numeric( as.character( descr_missing$max_var_miss ) )
+  descr_missing$max_case_miss        <- as.numeric( as.character( descr_missing$max_case_miss ) )
+ 
   descriptive_missing_df
 }
+
 
 
 ##########################################################
