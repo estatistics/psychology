@@ -40,14 +40,11 @@ rownames(ex_df) <- 1:dim(ex_df)[1]
 ####           The Function                          #####
 ##########################################################
 
-
-
 descriptive_missing <- function (  df_missing_list_df  ) {
   
   # ### Test section
   # df_missing_list_df <- list( ex_df )
-  df_missing_list_df <-  df_list 
-  
+
   
   # rbind_null_df_lists function is included
   rbind_null_df_lists <- function ( list_of_dfs ) {
@@ -72,8 +69,7 @@ descriptive_missing <- function (  df_missing_list_df  ) {
     df_cbind
     
   }
-  
-  
+    
   # Lists
   var_max_df      <- list()
   case_max_p_df   <- list()
@@ -105,13 +101,13 @@ descriptive_missing <- function (  df_missing_list_df  ) {
   descriptive_missing_df             <- cbind( var_missing_df, case_missing_df, rownames( var_missing_df ),  rownames(case_missing_df ) )
   colnames( descriptive_missing_df ) <- c( "max_var_miss", "max_case_miss", "vars", "cases") 
   rownames( descriptive_missing_df ) <- paste0( "df_", seq(1:length( df_missing_list_df ))  )
-  descr_missing$max_var_miss         <- as.numeric( as.character( descr_missing$max_var_miss ) )
-  descr_missing$max_case_miss        <- as.numeric( as.character( descr_missing$max_case_miss ) )
+  
+  descriptive_missing_df            <- as.data.frame( descriptive_missing_df )
+  descriptive_missing_df[,1]        <- as.numeric( as.character( descriptive_missing_df[,1] ) )
+  descriptive_missing_df[,2]        <- as.numeric( as.character( descriptive_missing_df[,2] ) )
  
   descriptive_missing_df
 }
-
-
 
 ##########################################################
 ####           Running  The Example                  #####
