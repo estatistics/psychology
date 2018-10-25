@@ -46,8 +46,7 @@ list_of_df      <- apply(ex_df=="NA", 2, ( table) )
 
 # The function to rbind it
 rbind_null_df_lists <- function ( list_of_dfs ) {
-   # list_of_dfs <- tables_ln
-  
+ 
   
   if ( length(names(list_of_dfs)) == 0 ) {
     names(list_of_dfs) <- 1:length(list_of_dfs )
