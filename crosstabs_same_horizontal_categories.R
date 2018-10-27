@@ -25,17 +25,6 @@
 # SEE at the end of this file
 
 
-# Declare the path to save example csv files
-# For window users, please change it accordingly...
-path_of_csvs <- "/tmp/"
-
-
-# writing the files on the specified path
-write.table( crosstabs_01,  append = F, paste0(path_of_csvs, "cross_01.csv"), sep = "," )
-write.table( crosstabs_02,  append = F, paste0(path_of_csvs, "cross_02.csv"), sep = "," )
-
-
-
 ##########################################################
 ####Arguments of the Function                       #####
 ##########################################################
@@ -266,11 +255,24 @@ write.table( rbind_chsq,  append = TRUE, paste0(pth, "pearson_cross.csv") )
 #### Downloading example crosstab csv files from github of "estatistics/psychology"
 #### !!! please uncomment the following lines in order to run the example !!!
 
-# # require(RCurl)
-# # crosstabs_01 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_01.csv" ), 
-# #                         skip=0, header=F,  sep = "," )
-# # crosstabs_02 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_02.csv"), 
-# #                         skip=0, header=F,  sep = ","  )
+
+# require(RCurl)
+# crosstabs_01 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_01.csv" ), 
+#                         skip=0, header=F,  sep = "," )
+# crosstabs_02 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_02.csv"), 
+#                         skip=0, header=F,  sep = ","  )
+# 
+# 
+# 
+# Declare the path to save example csv files
+# For window users, please change it accordingly...
+# path_of_csvs <- "/tmp/"
+# 
+# 
+# # writing the files on the specified path
+# write.table( crosstabs_01,  append = F, paste0(path_of_csvs, "cross_01.csv"), sep = "," )
+# write.table( crosstabs_02,  append = F, paste0(path_of_csvs, "cross_02.csv"), sep = "," )
+
 
 
 ##### Please uncomment the below line/s in order to run the example 
