@@ -19,17 +19,11 @@
 
 
 ##########################################################
-#### Example DF                                  #####
+#### Example DF                                   #####
 ##########################################################
 
+# SEE at the end of this file
 
-# Downloading example crosstab csv files from github of "estatistics/psychology"
-require(RCurl)
-
-crosstabs_01 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_01.csv" ), 
-                        skip=0, header=F,  sep = "," )
-crosstabs_02 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_02.csv"), 
-                        skip=0, header=F,  sep = ","  )
 
 # Declare the path to save example csv files
 # For window users, please change it accordingly...
@@ -267,9 +261,21 @@ write.table( rbind_chsq,  append = TRUE, paste0(pth, "pearson_cross.csv") )
 ####           Running  The Example                  #####
 ##########################################################
 
-# Please uncomment the below line/s in order to run the example 
 
-#### crosstabs_same_horizontal_categories ( path_of_csvs )
+
+#### Downloading example crosstab csv files from github of "estatistics/psychology"
+#### !!! please uncomment the following lines in order to run the example !!!
+
+# # require(RCurl)
+# # crosstabs_01 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_01.csv" ), 
+# #                         skip=0, header=F,  sep = "," )
+# # crosstabs_02 <-read.csv(text=getURL("https://raw.githubusercontent.com/estatistics/psychology/master/crosstabs_02.csv"), 
+# #                         skip=0, header=F,  sep = ","  )
+
+
+##### Please uncomment the below line/s in order to run the example 
+
+# crosstabs_same_horizontal_categories ( path_of_csvs )
 
   
   
