@@ -191,7 +191,7 @@ for ( d in 1:length( csv_files ) ) {
   
   
 #### Rbinding the datasets 
-  var_names[[d]] <- trimws(substr( test_nm[[1]], st_pos[[1]]+3, fn_pos[[1]])[[1]])
+  var_names[[d]]   <- trimws(substr( test_nm[[1]], st_pos[[1]]+3, fn_pos[[1]])[[1]])
   
   rbind_cross[[d]] <- rbind_null_df_lists( tables_ln )
   rbind_chsq[[d]]  <- rbind_null_df_lists( chsq_lns )
@@ -200,16 +200,16 @@ for ( d in 1:length( csv_files ) ) {
 
 ####  Adding names to the dataset
 names( rbind_cross )  <- var_names
-names( rbind_chsq )<- var_names
+names( rbind_chsq )   <- var_names
 
 
 ### Finding the dataset with the whole "label" categories
-lgth_list  <-  length( rbind_cross )
+lgth_list     <-  length( rbind_cross )
 rlist_labels  <-  lapply( 1:lgth_list, function(x)  rbind_cross[[x]][1,][ rbind_cross[[x]][1,] != ""] )
-lbls_unique<-  unique( unlist( rlist_labels ) )
+lbls_unique   <-  unique( unlist( rlist_labels ) )
 rlist_length  <-  unlist( lapply( 1:lgth_list, function(x)  length( rbind_cross[[x]][1,][ rbind_cross[[x]][1,] != ""]) ) )
-max_lbls<-  length( lbls_unique )
-seq_max <-  1:max_lbls
+max_lbls      <-  length( lbls_unique )
+seq_max       <-  1:max_lbls
 
 # rlist_max_lg  <-  which(max( rlist_length ) == rlist_length )[1]
 # rlist_max_labels <-  rlist_labels[[ rlist_max_lg ]]
@@ -251,15 +251,25 @@ file.create( paste0(pth, "cbind_cross.csv") )
 write.table( horizontally_aligned,  append = TRUE, paste0(pth, "cbind_cross.csv") )
 
 
+# Creating an empty file for Pearsons's square results
+file.create( paste0(pth, "pearson_cross.csv") )
+
+# Appending the resultsfor Pearsons's square results
+write.table( rbind_chsq,  append = TRUE, paste0(pth, "pearson_cross.csv") )
+
+
 }
+
+
 
 
 ##########################################################
 ####           Running  The Example                  #####
 ##########################################################
 
-##### Please uncomment the below line/s in order to run the example 
+# Please uncomment the below line/s in order to run the example 
 
-# crosstabs_same_horizontal_categories ( path_of_csvs )
+#### crosstabs_same_horizontal_categories ( path_of_csvs )
 
+  
   
