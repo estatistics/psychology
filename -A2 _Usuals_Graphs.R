@@ -6,7 +6,7 @@ library(psych)
 
 
 
-pth  = "/home/elias/Data/STATISTICS/papaioanou/"
+pth  = "/home/"
 file = "data_short.csv"
 
 # Reading csv file
