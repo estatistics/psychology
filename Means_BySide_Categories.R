@@ -18,7 +18,7 @@ df_sample <- structure(list(V1 = structure(c(7L, 6L, 1L, 2L, 3L, 4L, 5L,
                                                  "9", "Frequency"), class = "factor")), row.names = c(NA, 42L), class = "data.frame")
 
 
-pth  = "/home/elias/Data/STATISTICS/elena lamp/"
+pth  = "/home/"
 file = "PSPP_Tables_percentages.csv"
 
 # Reading csv file
