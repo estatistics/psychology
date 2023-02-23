@@ -1,5 +1,5 @@
 
-pth         = "/home/elias/Data/STATISTICS/papaioanou/output/"
+pth         = "/home/"
 file        = "Means.csv"
 data_0      = read.csv( paste0(pth, file), header = F, sep = ",", quote = "" )
 
