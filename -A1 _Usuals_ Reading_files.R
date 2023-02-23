@@ -5,7 +5,7 @@ library("gplots")
 library("ggpubr")
 # install.packages("ggpubr")
 
-pth="/home/elias/Data/STATISTICS/μαρια_ρεβιου/pap/output/"
+pth="/home/output/"
 
 file="data.csv"
 
