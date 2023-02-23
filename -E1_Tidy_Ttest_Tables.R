@@ -1,5 +1,5 @@
 
-pth         = "/home/elias/Data/STATISTICS/athanasoula/output/"
+pth         = "/home/"
 file        = "ttests.csv"
 txtfile     <- readLines( paste0(pth, file) )
 data_0      <- as.data.frame( do.call( rbind, strsplit(txtfile, ",") ) )
