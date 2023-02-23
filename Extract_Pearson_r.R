@@ -1,5 +1,5 @@
 
-pth  = "/home/elias/Data/STATISTICS/elena lamp/"
+pth  = "/"
 file = "ct_empeiria.csv"
 
 # Reading csv file
