@@ -6,11 +6,11 @@ library("ggpubr")
 # install.packages("ggpubr")
 
 
-pth="/home/elias/erg/AA-Templates/rTemplates/"
+pth="/home/"
 
 file="AA__data_01.csv"
 
-pth="/home/elias/erg/STATISTICS/Kostas/"
+pth="/home/
 
 file="data.csv"
 
