@@ -7,7 +7,7 @@ library(ggeffects)
 library(effects)
 
 
-pth="/home/elias/Data/STATISTICS/!!-DONE/ιοαννα φαρδοθλι/"
+pth="/home/"
 file="data_r.csv"
 
 file0="Group_0.csv"
