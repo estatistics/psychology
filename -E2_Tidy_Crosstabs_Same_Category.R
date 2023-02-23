@@ -52,7 +52,7 @@ write.table( crosstabs_02,  append = F, paste0(path_of_csvs, "cross_02.csv"), se
 ##########################################################
 
 
-path_of_csvs = "/home/elias/Desktop/erg/argyris/crosstabs_q1/csv/"
+path_of_csvs = "/home/csv/"
 
 
 
