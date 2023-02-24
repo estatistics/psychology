@@ -1,3 +1,5 @@
+Licence for github of estatisticspsychology files
+
 MIT License
 
 Copyright (c) - 2023 - Elias Tsolis
