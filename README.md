@@ -3,7 +3,7 @@ This is a project that has as an aim to automate the outputs of statistical prog
 I am searching for collaborators that know to program in python / c / c++ (or u can suggest other language - NO JAVA) languages in order to code this project more properly. Please contact me if you are interest estatisticseu@gmail.com.
 
 ### For collaborators
-If you know how to manipulate - in  a computer program language - large tables with numbers and trasnpose them, remove or add columns then you may contact me. To test your self, You may try to make tables in Sheet 1 of output_ind_ttest.csv to looks like in Sheet 2 of same file. 
+If you know how to manipulate - in  a computer program language - large tables with numbers and transpose them, remove or add columns then you may contact me. To test your self, You may try to make tables in Sheet 1 of output_ind_ttest.csv to looks like in Sheet 2 of same file. 
 
 ### How we can be paid
 You must like opensource, contribution for free, statistics and of course this project itself. 
