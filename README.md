@@ -1,3 +1,7 @@
+This is a project that has as an aim to automate the outputs of statistical programs like R, Jasp, Jamovi, PSPP (and thus SPSS) into useful reports. 
+
+I am searching for collaborators that know to program in python / c / c++ (or u can suggest other language - NO JAVA) languages in order to code this project more properly. Please contact me if you are interest estatisticseu@gmail.com.
+
 ### psychology
 * R Functions for psychologists and Social science people
 
