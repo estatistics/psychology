@@ -21,7 +21,7 @@ cite_pkgs <- function(){
     secname_pkg       <- mtx[grepl("author.family", rownames(mtx))]   
     names_pkg         <- paste0(paste(secname_pkg, firstletter), ".")
     
-    # print(names_pkg)
+    # print(names_pkg) # for debugging purposes
     
     # Making the citation
     pst_pkg <- paste(paste(names_pkg, collapse=", "),
