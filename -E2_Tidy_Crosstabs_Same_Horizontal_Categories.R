@@ -43,7 +43,7 @@
 
 crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts=FALSE,
                                              tbl_rows=c('Count','Row','Col', "rTotal"), rsumTotal=0, 
-                                             chqstats=c('Cramersv', 'Phi',  'Contingency', 'taub', 'tauc', 'tauc', 'Gamma', 'Spearman', 'Pearson') ) {
+                                             chqstats=c('Cramersv', 'Phi',  'Contingency', 'taub', 'tauc', 'Gamma', 'Spearman', 'Pearson') ) {
 
             
   csv_files = read.csv( paste0(path_csv, file_name), header = FALSE, sep = ",", quote = "", na.strings="." )
