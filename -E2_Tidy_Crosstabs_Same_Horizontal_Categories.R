@@ -1,19 +1,27 @@
 ##########################################################
 #### Description                                     #####
 ##########################################################
+
 # This function tries to tidy up PSPP tables to be aligned vertically, based on same 
 # horizontal labels 
 # Crosstabulation tables produced from open source statistical program PSPP
 
+#Limitations
+# The code tries to find the Last Total column by counting Totals
+# This is done by taking into consideration "100%" summaries of pspp
+# that has an extra "total". This is not counted at the final results.
+
 ##########################################################
 #### Dependencies                                   #####
 ##########################################################
+
 # Depends on Base R / stats only
 # To write results may require(RCurl)
 
 ##########################################################
 #### Example DF                                   #####
 ##########################################################
+
 # SEE at the end of this file
 
 ##########################################################
@@ -45,7 +53,7 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
                                              tbl_rows=c('Count','Row','Col', "rTotal"), rsumTotal=0, 
                                              chqstats=c('Cramersv', 'Phi',  'Contingency', 'taub', 'tauc', 'Gamma', 'Spearman', 'Pearson') ) {
 
-            
+  options(max.print=999999)          
   csv_files = read.csv( paste0(path_csv, file_name), header = FALSE, sep = ",", quote = "", na.strings="." )
   str(csv_files)
   
@@ -74,18 +82,21 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   include_tbl <- c(tbl_Count, tbl_Row, tbl_Col, tbl_rTotal)
   exclude_nan <- include_tbl[include_tbl %!in% "NAN" ] 
   
-  
-  # Getting the last column of numerical tables
-  min_dim_var_Tot <- crosstbs[ ,min(dim(crosstbs))-1] 
-  # tbl_st tbl_fn - start/fin of numerical tables
-  tbl_st          <- crosstbs[crosstbs$id[ grepl(x=min_dim_var_Tot, "Total") ] + 2, ] 
-  tbl_fn          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[1]], "Total") ], ] 
+  Tbl_last_total  <- as.data.frame( sapply( 1:min(dim(crosstbs)), function(i) table(crosstbs[i])["Total"]    ) )
+  df_tbl          <- cbind(Tbl_last_total, 1:dim(Tbl_last_total)[1])
+  col_max_tot     <- which.max(df_tbl[,1])
+  col_min_tot     <- which.min(df_tbl[,1])
+
+   # tbl_st tbl_fn - start/fin of numerical tables
+  tbl_st          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[col_max_tot]], "Total") ], ][-1,] 
+  tbl_fn          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[col_min_tot]], "Total") ], ] 
   # number of tables
   no_tbls         <- length(tbl_st$id)
   # Which rows to include? 
-  dims_no_st_fn   <- sapply(1:no_tbls, function(i) seq( tbl_st$id[i],  tbl_fn$id[i] -1 + tbl_rsumTotal)) 
+  dims_no_st_fn   <- sapply(1:no_tbls, function(i) seq( tbl_st$id[i] + 2,  tbl_fn$id[i] -1 + tbl_rsumTotal)) 
   # The numerical tables as list
   cross_tbls      <- sapply(1:no_tbls, function(i) list(  rbind(crosstbs[ dims_no_st_fn[[i]], ], rep("", min(dim(crosstbs)) ) ) ) )
+  cross_tbls
   # The numerical tables as binded
   crss_tbls_binded <- do.call("rbind", cross_tbls)
   # adding colanmes
@@ -100,7 +111,7 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   colnames(crss_tbls_binded)[ min(dim(crosstbs)) ] <- "id"
   
   # final crosstabs data
-  final_crosstbl <- crss_tbls_binded[crss_tbls_binded$Counts %in% exclude_nan, ]
+  final_crosstbl <- crss_tbls_binded[crss_tbls_binded$Counts %in% c("", exclude_nan), ]
   
   #####################################################################################
   #####################################################################################
@@ -161,7 +172,6 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   write.table( chqstats_df_final,  append = TRUE, paste0(path_csv, "chqstats.csv") )
   
 }
-
 
 
 ##########################################################
