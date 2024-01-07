@@ -1,22 +1,19 @@
 ##########################################################
 #### Description                                     #####
 ##########################################################
-
+# This function tries to tidy up PSPP tables to be aligned vertically, based on same 
+# horizontal labels 
 # Crosstabulation tables produced from open source statistical program PSPP
-# This function tries to tidy up tables to be aligned vertically, based on same 
-# horizontal laberls 
 
 ##########################################################
 #### Dependencies                                   #####
 ##########################################################
-
 # Depends on Base R / stats only
 # To write results may require(RCurl)
 
 ##########################################################
 #### Example DF                                   #####
 ##########################################################
-
 # SEE at the end of this file
 
 ##########################################################
