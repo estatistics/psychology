@@ -1,0 +1,377 @@
+Table: Summary,,,,,,
+,Cases,,,,,
+,Valid,,Missing,,Total,
+,N,Percent,N,Percent,N,Percent
+gender × sexuality,250,100.0%,0,.0%,250,100.0%
+age × sexuality,250,100.0%,0,.0%,250,100.0%
+times × sexuality,250,100.0%,0,.0%,250,100.0%
+type × sexuality,250,100.0%,0,.0%,250,100.0%
+smoking × sexuality,250,100.0%,0,.0%,250,100.0%
+diet_vegan × sexuality,250,100.0%,0,.0%,250,100.0%
+erotism × sexuality,250,100.0%,0,.0%,250,100.0%
+romantism × sexuality,250,100.0%,0,.0%,250,100.0%
+reading × sexuality,250,100.0%,0,.0%,250,100.0%
+gaming × sexuality,250,100.0%,0,.0%,250,100.0%
+gym × sexuality,250,100.0%,0,.0%,250,100.0%
+,,,,,,
+Table: gender × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+gender,male,Count,1,13,14,28
+,,Row %,3.6%,46.4%,50.0%,100.0%
+,,Total %,.4%,5.2%,5.6%,11.2%
+,female,Count,45,79,98,222
+,,Row %,20.3%,35.6%,44.1%,100.0%
+,,Total %,18.0%,31.6%,39.2%,88.8%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,4.75,2,.093,,,
+Likelihood Ratio,6.36,2,.042,,,
+Linear-by-Linear Association,2.24,1,.134,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.14,,,,
+,Cramer's V,.14,,,,
+,Contingency Coefficient,.14,,,,
+Ordinal by Ordinal,Kendall's tau-b,-.08,.05,-1.50,,
+,Kendall's tau-c,-.06,.04,-1.50,,
+,Gamma,-.23,.15,-1.50,,
+,Spearman Correlation,-.08,.05,-1.31,,
+Interval by Interval,Pearson's R,-.09,.05,-1.50,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: age × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+age,41-50,Count,9,0,8,17
+,,Row %,52.9%,.0%,47.1%,100.0%
+,,Total %,3.6%,.0%,3.2%,6.8%
+,51-60,Count,28,11,15,54
+,,Row %,51.9%,20.4%,27.8%,100.0%
+,,Total %,11.2%,4.4%,6.0%,21.6%
+,61-70,Count,7,51,29,87
+,,Row %,8.0%,58.6%,33.3%,100.0%
+,,Total %,2.8%,20.4%,11.6%,34.8%
+,71-80,Count,2,30,60,92
+,,Row %,2.2%,32.6%,65.2%,100.0%
+,,Total %,.8%,12.0%,24.0%,36.8%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,98.64,6,.000,,,
+Likelihood Ratio,98.50,6,.000,,,
+Linear-by-Linear Association,42.85,1,.000,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.63,,,,
+,Cramer's V,.44,,,,
+,Contingency Coefficient,.53,,,,
+Ordinal by Ordinal,Kendall's tau-b,.37,.06,6.41,,
+,Kendall's tau-c,.37,.06,6.41,,
+,Gamma,.52,.07,6.41,,
+,Spearman Correlation,.40,.06,6.88,,
+Interval by Interval,Pearson's R,.41,.06,7.18,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: times × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+times,non,Count,30,74,66,170
+,,Row %,17.6%,43.5%,38.8%,100.0%
+,,Total %,12.0%,29.6%,26.4%,68.0%
+,yes,Count,16,18,46,80
+,,Row %,20.0%,22.5%,57.5%,100.0%
+,,Total %,6.4%,7.2%,18.4%,32.0%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,10.94,2,.004,,,
+Likelihood Ratio,11.37,2,.003,,,
+Linear-by-Linear Association,2.57,1,.109,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.21,,,,
+,Cramer's V,.21,,,,
+,Contingency Coefficient,.20,,,,
+Ordinal by Ordinal,Kendall's tau-b,.12,.06,1.86,,
+,Kendall's tau-c,.12,.07,1.86,,
+,Gamma,.22,.12,1.86,,
+,Spearman Correlation,.12,.07,1.93,,
+Interval by Interval,Pearson's R,.10,.07,1.61,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: type × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+type,non,Count,39,81,59,179
+,,Row %,21.8%,45.3%,33.0%,100.0%
+,,Total %,15.6%,32.4%,23.6%,71.6%
+,yes,Count,7,11,53,71
+,,Row %,9.9%,15.5%,74.6%,100.0%
+,,Total %,2.8%,4.4%,21.2%,28.4%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,35.88,2,.000,,,
+Likelihood Ratio,36.81,2,.000,,,
+Linear-by-Linear Association,25.88,1,.000,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.38,,,,
+,Cramer's V,.38,,,,
+,Contingency Coefficient,.35,,,,
+Ordinal by Ordinal,Kendall's tau-b,.33,.06,5.67,,
+,Kendall's tau-c,.33,.06,5.67,,
+,Gamma,.61,.09,5.67,,
+,Spearman Correlation,.34,.06,5.75,,
+Interval by Interval,Pearson's R,.32,.06,5.36,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: smoking × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+smoking,non,Count,41,73,89,203
+,,Row %,20.2%,36.0%,43.8%,100.0%
+,,Total %,16.4%,29.2%,35.6%,81.2%
+,yes,Count,5,19,23,47
+,,Row %,10.6%,40.4%,48.9%,100.0%
+,,Total %,2.0%,7.6%,9.2%,18.8%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,2.32,2,.313,,,
+Likelihood Ratio,2.58,2,.275,,,
+Linear-by-Linear Association,1.45,1,.228,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.10,,,,
+,Cramer's V,.10,,,,
+,Contingency Coefficient,.10,,,,
+Ordinal by Ordinal,Kendall's tau-b,.07,.06,1.15,,
+,Kendall's tau-c,.06,.05,1.15,,
+,Gamma,.15,.13,1.15,,
+,Spearman Correlation,.07,.06,1.09,,
+Interval by Interval,Pearson's R,.08,.06,1.21,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: diet_vegan × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+diet_vegan,non,Count,46,79,100,225
+,,Row %,20.4%,35.1%,44.4%,100.0%
+,,Total %,18.4%,31.6%,40.0%,90.0%
+,yes,Count,0,13,12,25
+,,Row %,.0%,52.0%,48.0%,100.0%
+,,Total %,.0%,5.2%,4.8%,10.0%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,6.92,2,.031,,,
+Likelihood Ratio,11.32,2,.003,,,
+Linear-by-Linear Association,2.30,1,.130,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.17,,,,
+,Cramer's V,.17,,,,
+,Contingency Coefficient,.16,,,,
+Ordinal by Ordinal,Kendall's tau-b,.08,.05,1.53,,
+,Kendall's tau-c,.05,.03,1.53,,
+,Gamma,.23,.15,1.53,,
+,Spearman Correlation,.08,.05,1.26,,
+Interval by Interval,Pearson's R,.10,.04,1.52,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: erotism × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+erotism,non,Count,46,70,93,209
+,,Row %,22.0%,33.5%,44.5%,100.0%
+,,Total %,18.4%,28.0%,37.2%,83.6%
+,yes,Count,0,22,19,41
+,,Row %,.0%,53.7%,46.3%,100.0%
+,,Total %,.0%,8.8%,7.6%,16.4%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,12.84,2,.002,,,
+Likelihood Ratio,19.92,2,.000,,,
+Linear-by-Linear Association,3.45,1,.063,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.23,,,,
+,Cramer's V,.23,,,,
+,Contingency Coefficient,.22,,,,
+Ordinal by Ordinal,Kendall's tau-b,.09,.05,1.78,,
+,Kendall's tau-c,.07,.04,1.78,,
+,Gamma,.22,.12,1.78,,
+,Spearman Correlation,.09,.05,1.50,,
+Interval by Interval,Pearson's R,.12,.05,1.87,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: romantism × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+romantism,non,Count,28,83,98,209
+,,Row %,13.4%,39.7%,46.9%,100.0%
+,,Total %,11.2%,33.2%,39.2%,83.6%
+,yes,Count,18,9,14,41
+,,Row %,43.9%,22.0%,34.1%,100.0%
+,,Total %,7.2%,3.6%,5.6%,16.4%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,21.52,2,.000,,,
+Likelihood Ratio,18.22,2,.000,,,
+Linear-by-Linear Association,11.36,1,.001,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.29,,,,
+,Cramer's V,.29,,,,
+,Contingency Coefficient,.28,,,,
+Ordinal by Ordinal,Kendall's tau-b,-.18,.07,-2.60,,
+,Kendall's tau-c,-.15,.06,-2.60,,
+,Gamma,-.39,.13,-2.60,,
+,Spearman Correlation,-.19,.07,-3.03,,
+Interval by Interval,Pearson's R,-.21,.07,-3.44,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: reading × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+reading,<8.5 less,Count,0,61,84,145
+,,Row %,.0%,42.1%,57.9%,100.0%
+,,Total %,.0%,24.4%,33.6%,58.0%
+,8.5-10 norm,Count,46,31,28,105
+,,Row %,43.8%,29.5%,26.7%,100.0%
+,,Total %,18.4%,12.4%,11.2%,42.0%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,79.42,2,.000,,,
+Likelihood Ratio,96.61,2,.000,,,
+Linear-by-Linear Association,60.80,1,.000,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.56,,,,
+,Cramer's V,.56,,,,
+,Contingency Coefficient,.49,,,,
+Ordinal by Ordinal,Kendall's tau-b,-.44,.05,-8.01,,
+,Kendall's tau-c,-.48,.06,-8.01,,
+,Gamma,-.69,.07,-8.01,,
+,Spearman Correlation,-.46,.05,-8.15,,
+Interval by Interval,Pearson's R,-.49,.05,-8.95,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: gaming × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+gaming,<3 less,Count,0,77,100,177
+,,Row %,.0%,43.5%,56.5%,100.0%
+,,Total %,.0%,30.8%,40.0%,70.8%
+,3-4.5 norm,Count,46,15,12,73
+,,Row %,63.0%,20.5%,16.4%,100.0%
+,,Total %,18.4%,6.0%,4.8%,29.2%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,137.45,2,.000,,,
+Likelihood Ratio,143.87,2,.000,,,
+Linear-by-Linear Association,97.26,1,.000,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.74,,,,
+,Cramer's V,.74,,,,
+,Contingency Coefficient,.60,,,,
+Ordinal by Ordinal,Kendall's tau-b,-.55,.05,-9.15,,
+,Kendall's tau-c,-.56,.06,-9.15,,
+,Gamma,-.83,.05,-9.15,,
+,Spearman Correlation,-.57,.05,-11.07,,
+Interval by Interval,Pearson's R,-.62,.05,-12.61,,
+N of Valid Cases,,250,,,,
+,,,,,,
+Table: gym × sexuality,,,,,,
+,,,sexuality,,,Total
+,,,normal,more,even more,
+gym,<20 less,Count,0,0,31,31
+,,Row %,.0%,.0%,100.0%,100.0%
+,,Total %,.0%,.0%,12.4%,12.4%
+,20-30 norm,Count,0,82,68,150
+,,Row %,.0%,54.7%,45.3%,100.0%
+,,Total %,.0%,32.8%,27.2%,60.0%
+,more,Count,46,10,13,69
+,,Row %,66.7%,14.5%,18.8%,100.0%
+,,Total %,18.4%,4.0%,5.2%,27.6%
+Total,,Count,46,92,112,250
+,,Row %,18.4%,36.8%,44.8%,100.0%
+,,Total %,18.4%,36.8%,44.8%,100.0%
+,,,,,,
+Table: Chi-Square Tests,,,,,,
+,Value,df,Asymptotic Sig. (2-tailed),,,
+Pearson Chi-Square,185.89,4,.000,,,
+Likelihood Ratio,193.58,4,.000,,,
+Linear-by-Linear Association,103.03,1,.000,,,
+N of Valid Cases,250,,,,,
+,,,,,,
+Table: Symmetric Measures,,,,,,
+,,Value,Asymp. Std. Error,Approx. T,,
+Nominal by Nominal,Phi,.86,,,,
+,Cramer's V,.61,,,,
+,Contingency Coefficient,.65,,,,
+Ordinal by Ordinal,Kendall's tau-b,-.59,.04,-10.97,,
+,Kendall's tau-c,-.52,.05,-10.97,,
+,Gamma,-.84,.05,-10.97,,
+,Spearman Correlation,-.61,.04,-12.27,,
+Interval by Interval,Pearson's R,-.64,.04,-13.23,,
+Measure of Agreement,Kappa,.02,.05,.46,,
+N of Valid Cases,,250,,,,
