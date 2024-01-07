@@ -2,12 +2,9 @@
 #### Description                                     #####
 ##########################################################
 
-# It requires csv files in a directory that are 
 # Crosstabulation tables produced from open source statistical program PSPP
-# Multiple tables may miss a category, not aligned vertically, in the same column
-# This function it tidy up tables to be aligned vertically, with same category 
-# in the same column.
-
+# This function tries to tidy up tables to be aligned vertically, based on same 
+# horizontal laberls 
 
 ##########################################################
 #### Dependencies                                   #####
