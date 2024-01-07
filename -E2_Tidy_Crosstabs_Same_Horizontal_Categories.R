@@ -11,6 +11,11 @@
 # This is done by taking into consideration "100%" summaries of pspp
 # that has an extra "total". This is not counted at the final results.
 
+# WARNING 
+# read.csv uses only the first 5 rows to determine if a column has data
+# If not, it is skipping it. So, please add some dummy colnames in 
+# order to import all your columns
+
 ##########################################################
 #### Dependencies                                   #####
 ##########################################################
@@ -54,8 +59,14 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
                                              chqstats=c('Cramersv', 'Phi',  'Contingency', 'taub', 'tauc', 'Gamma', 'Spearman', 'Pearson') ) {
 
   options(max.print=999999)          
-  csv_files = read.csv( paste0(path_csv, file_name), header = FALSE, sep = ",", quote = "", na.strings="." )
+  csv_files = read.csv( paste0(path_csv, file_name), header = FALSE, strip.white = FALSE, 
+                        blank.lines.skip = FALSE, sep = ",", quote = "", na.strings=".",
+                        numerals = c("no.loss"), fill = T, skipNul=F )
+  
   str(csv_files)
+  colnames(csv_files)
+  dim(csv_files)
+  head(csv_files, 10)
   
   # Reading csv file
   if (csv_opts == FALSE)  csv_files=csv_files   else if (csv_opts != FALSE)     csv_files = csv_opts
@@ -82,21 +93,33 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   include_tbl <- c(tbl_Count, tbl_Row, tbl_Col, tbl_rTotal)
   exclude_nan <- include_tbl[include_tbl %!in% "NAN" ] 
   
-  Tbl_last_total  <- as.data.frame( sapply( 1:min(dim(crosstbs)), function(i) table(crosstbs[i])["Total"]    ) )
-  df_tbl          <- cbind(Tbl_last_total, 1:dim(Tbl_last_total)[1])
-  col_max_tot     <- which.max(df_tbl[,1])
-  col_min_tot     <- which.min(df_tbl[,1])
+  # Excluding "NAN" and "1" from table(sum), finding the first and last column of data. 
+  tbl_last  <- as.data.frame( sapply( 1:min(dim(crosstbs)), function(i) table(crosstbs[i])["Total"]    ) )
+  tbl <- cbind( tbl_last, 1:dim(tbl_last)[1])
+  colnames(tbl) <- c("a", "b")
+  tbl_nn        <- tbl[!is.na(tbl["a"]),]
+  tbl_nn1       <- tbl_nn[tbl_nn["a"]!=1,]
+  col_min_tot   <- as.integer( tbl_nn1[min(order(tbl_nn1[,1])),]["b"][1] )
+  col_max_tot   <- as.integer( tbl_nn1[max(order(tbl_nn1[,1])),]["b"][1] )
 
    # tbl_st tbl_fn - start/fin of numerical tables
-  tbl_st          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[col_max_tot]], "Total") ], ][-1,] 
+  tbl_st          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[col_max_tot]], "Total") ], ]
   tbl_fn          <- crosstbs[crosstbs$id[ grepl(x=crosstbs[[col_min_tot]], "Total") ], ] 
+
+  print("table start values")
+  dim( tbl_st); tbl_st
+  print("table end values")
+  dim( tbl_fn); tbl_fn
+
+   if ( dim( tbl_st)[1] > dim( tbl_fn)[1] ) tbl_st <- tbl_st[-1,] else if ( dim( tbl_st)[1] == dim( tbl_fn)[1] ) tbl_st=tbl_st;
+  
+  
   # number of tables
   no_tbls         <- length(tbl_st$id)
   # Which rows to include? 
   dims_no_st_fn   <- sapply(1:no_tbls, function(i) seq( tbl_st$id[i] + 2,  tbl_fn$id[i] -1 + tbl_rsumTotal)) 
   # The numerical tables as list
   cross_tbls      <- sapply(1:no_tbls, function(i) list(  rbind(crosstbs[ dims_no_st_fn[[i]], ], rep("", min(dim(crosstbs)) ) ) ) )
-  cross_tbls
   # The numerical tables as binded
   crss_tbls_binded <- do.call("rbind", cross_tbls)
   # adding colanmes
@@ -160,7 +183,7 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   chqstats_df       <- c(chq_cramersv, chq_phi,  chq_conting, chq_taub, chq_tauc, chq_gamma, chq_spearman, chq_pearson)
   chqstats_df_final <- cbind( chq_pchisq, chq_nvalid, chqstats_all[ chqstats_nan ] )
   
-
+  
   #####################################################################################
   #####################################################################################
   
@@ -172,7 +195,6 @@ crosstabs_same_horizontal_labels <- function(path_csv="", file_name="", csv_opts
   write.table( chqstats_df_final,  append = TRUE, paste0(path_csv, "chqstats.csv") )
   
 }
-
 
 ##########################################################
 ####           Running  The Example                  #####
